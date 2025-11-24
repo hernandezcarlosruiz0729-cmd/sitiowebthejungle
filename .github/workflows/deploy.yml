@@ -1,0 +1,77 @@
+name: Pruebas y despliegue de pagina estatica
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: Checkout repository
+            uses: actions/checkout@v4
+
+        -   name: Set up node.js
+            uses: actions/setup-node@v4
+            with:
+                node-version: '18'
+
+        -   name: Install HTMLHint and Stylelint
+            run: |
+                npm install -g htmlhint stylelint stylelint-config-standard
+
+        -   name: Run HTMLHint
+            run: htmlhint "**/*.html"
+
+        -   name: Run Stylelint
+            run: npx stylelint "**/*.css"
+
+    build:
+        name: Contrucción del contenedor Docker
+        runs-on: ubuntu-latest
+        needs: test
+        steps:
+        -   name: Checkout repository
+            uses: actions/checkout@v4
+
+        -   name: Build Docker image
+            run: docker build -t sitio-estatico . 
+
+        -   name: Run Container
+            run: docker run -d -p 8080:80 sitio-estatico
+
+        -   name: List running containers
+            run: docker ps
+
+        -   name: Prepare site for deployment
+            run: |
+                mkdir deploy
+                cp -r html/* deploy/
+                cp -r css deploy/
+                cp -r js deploy/
+                if [ -d "images" ]; then cp -r images deploy/; fi
+
+        -   name: Upload site artifact
+            uses: actions/upload-pages-artifact@v3
+            with:
+                path: deploy
+
+    deploy:
+        name: Despliegue en GitHub Pages
+        runs-on: ubuntu-latest
+        needs: build
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        steps:
+        -   name: Deploy to GitHub Pages
+            id: deployment
+            uses: actions/deploy-pages@v4
