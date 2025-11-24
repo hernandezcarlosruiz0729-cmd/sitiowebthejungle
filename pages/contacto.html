@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - The Jungle</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<!-- APLICAMOS EL FONDO EXCLUSIVO DE CONTACTO -->
+<body class="fondo-contacto">
+
+  <header class="site-header">
+    <div class="logo">THE JUNGLE</div>
+    <nav class="nav">
+      <a href="../index.html">Inicio</a>
+      <a href="acerca.html">Acerca</a>
+      <a href="gameplay.html">Gameplay</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <h1>Contacto</h1>
+      <p>Envíanos un mensaje y responderemos pronto.</p>
+    </section>
+
+    <!-- FORMULARIO ORGANIZADO -->
+    <section class="contact-section">
+      <form id="contact-form" class="contact-form">
+
+        <div class="form-group">
+          <label>Nombre completo</label>
+          <input type="text" id="nombre" required
+            pattern="^[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,40}$"
+            placeholder="Tu nombre">
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            placeholder="correo@ejemplo.com">
+        </div>
+
+        <div class="form-group">
+          <label>Asunto</label>
+          <input type="text" id="asunto" required
+            pattern="^[A-Za-z0-9 ÁÉÍÓÚáéíóúñÑ]{3,40}$"
+            placeholder="Motivo">
+        </div>
+
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea id="mensaje" required minlength="10" maxlength="300"
+            placeholder="Escribe tu mensaje"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+
+      <p id="form-status" class="form-status"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="links">
+      <a href="#">Términos</a> · <a href="#">Privacidad</a> · <a href="#">Créditos</a>
+    </div>
+    <div class="copyright">© 2025 The Jungle</div>
+  </footer>
+
+  <script>
+    // VALIDACIÓN + MENSAJE
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        status.textContent = "Corrige los campos marcados.";
+        status.style.color = "red";
+      } else {
+        status.textContent = "Formulario enviado correctamente.";
+        status.style.color = "lightgreen";
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>

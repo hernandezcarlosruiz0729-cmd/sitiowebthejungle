@@ -1,0 +1,639 @@
+/* ==========================
+   FUENTE PIXEL 2D
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background: url("../images/Historiacinematica.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #d7fbe8;
+  line-height: 1.6;
+
+
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+.site-header {
+  background: #0f2d1d;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #3cff9b;
+}
+
+.logo {
+  color: #66ffbf;
+  font-size: 18px;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: #d0ffd8;
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.nav a:hover,
+.nav .active {
+  color: #66ffbf;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Imagen directa sin cuadrito */
+.hero-img img {
+  width: 380px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Texto hero */
+.hero-content h1 {
+  color: #66ffbf;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.hero-content p {
+  font-size: 12px;
+  max-width: 420px;
+}
+
+/* ==========================
+   BOTONES
+========================== */
+.btn {
+  background: #66ffbf;
+  color: #0a1811;
+  padding: 12px 22px;
+  display: inline-block;
+  margin-right: 10px;
+  border: 4px solid #145f3d;
+  font-size: 12px;
+  text-decoration: none;
+  box-shadow: 4px 4px 0px #0c291d;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translate(-3px, -3px);
+}
+
+.btn.outline {
+  background: transparent;
+  color: #66ffbf;
+  border: 4px solid #66ffbf;
+}
+
+/* ==========================
+   FEATURES
+========================== */
+.features {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.features article {
+  width: 240px;
+  padding: 20px;
+  background: #0f2d1d;
+  border: 4px solid #3cff9b;
+  box-shadow: 0 0 0 4px #145f3d;
+}
+
+.features article h3 {
+  color: #66ffbf;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.features article p {
+  font-size: 11px;
+}
+
+/* ==========================
+   CTA
+========================== */
+.cta {
+  background: #0f281c;
+  border-top: 4px solid #3cff9b;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 18px;
+  color: #66ffbf;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.subscribe-form {
+  margin-top: 25px;
+}
+
+.subscribe-form input {
+  padding: 10px 15px;
+  width: 260px;
+  border: 4px solid #66ffbf;
+  background: #0c1d15;
+  color: #d0ffd8;
+  font-size: 12px;
+}
+
+.subscribe-form button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  background: #66ffbf;
+  border: 4px solid #145f3d;
+  color: #0a1811;
+  font-size: 12px;
+  box-shadow: 4px 4px 0px #0c291d;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.site-footer {
+  text-align: center;
+  padding: 30px;
+  background: #0f2d1d;
+  border-top: 4px solid #3cff9b;
+}
+
+.site-footer a {
+  color: #66ffbf;
+  font-size: 11px;
+}
+
+.site-footer a:hover {
+  color: #d0ffd8;
+}
+
+/* ==========================
+   BACKGROUND ESPECÍFICO DE ACERCA
+========================== */
+.acerca-body {
+  background: url("../images/Galeriaprincipalfondo1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ==========================
+   HERO ACERCA
+========================== */
+.page-hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  border-bottom: 4px solid #3cff9b;
+}
+
+.page-hero h1 {
+  font-size: 22px;
+  color: #66ffbf;
+  text-shadow: 3px 3px 0px #145f3d;
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  font-size: 12px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ==========================
+   ACERCA GRID
+========================== */
+.acerca-grid {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 25px;
+}
+
+.acerca-card {
+  background: #0f2d1d;
+  border: 4px solid #3cff9b;
+  padding: 25px;
+  box-shadow: 0 0 0 4px #145f3d;
+}
+
+.acerca-card h2 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #66ffbf;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.acerca-card p {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* Fondo exclusivo para GAMEPLAY */
+.fondo-gameplay {
+    background-image: url("../images/Historiaprincipal.png"); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ==========================
+   CONTACTO – FORMULARIO
+========================== */
+
+.fondo-contacto {
+  background: url("../images/fondoprincipal2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 4px solid #3cff9b;
+  box-shadow: 0 0 0 4px #145f3d;
+  border-radius: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 12px;
+  color: #66ffbf;
+  margin-bottom: 6px;
+  text-shadow: 2px 2px 0px #145f3d;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 12px;
+  border: 3px solid #66ffbf;
+  background: rgba(0, 0, 0, 0.5);
+  color: #d7fbe8;
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.form-status {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ==========================
+   FORMULARIO DE CONTACTO
+   ========================== */
+
+.form-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-section h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* 🔹 FORMULARIO MÁS CHICO */
+.contact-form {
+  width: 320px;     /* <-- antes 420px */
+  padding: 20px;    /* <-- antes 35-40px */
+  border-radius: 15px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.55);
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 12px #00ff8866;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 12px; /* <-- más compacto */
+}
+
+.field label {
+  font-size: 13px;
+  color: #00ffcc;
+  margin-bottom: 4px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #0d0d0d;
+  border: 1px solid #00ff88aa;
+  padding: 7px;          /* <-- más pequeño */
+  border-radius: 6px;
+  font-size: 13px;       /* <-- reducido */
+  color: #fff;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 80px;          /* <-- antes más grande */
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 8px;          /* <-- más pequeño */
+  margin-top: 8px;
+  background: #00ff88;
+  color: #000;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-enviar:hover {
+  background: #00ffaa;
+}
+
+/* ==========================
+   GAMEPLAY – DISEÑO PRINCIPAL
+========================== */
+
+.gameplay-page {
+  padding: 50px;
+}
+
+/* HERO */
+.gp-hero {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 50px 20px;
+  border: 4px solid #3cff9b;
+  box-shadow: 0 0 0 4px #145f3d;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.gp-hero h1 {
+  font-size: 24px;
+  color: #66ffbf;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.gp-hero p {
+  font-size: 12px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* TARJETAS GENERAL */
+.gp-card {
+  background: #0f2d1d;
+  border: 4px solid #3cff9b;
+  box-shadow: 0 0 0 4px #145f3d;
+  padding: 30px;
+  margin-bottom: 35px;
+  border-radius: 10px;
+}
+
+.gp-card h2 {
+  font-size: 16px;
+  color: #66ffbf;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.gp-card ul li {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+/* GALERÍA */
+.gp-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 120px;
+  height: 120px;
+  background: #0b1f15;
+  border: 4px solid #66ffbf;
+  box-shadow: 0 0 0 4px #145f3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d0ffd8;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #66ffbf;
+}
+
+/* ==========================
+   ANIMACIONES RETRO PIXEL
+========================== */
+
+/* Fade-in */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Slide-up */
+.slide-up {
+  animation: slideUp 1.2s ease forwards;
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Pequeño delay */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+/* Pop efecto retro */
+.pop {
+  transition: transform 0.2s;
+}
+
+.pop:hover {
+  transform: scale(1.15) rotate(1deg);
+}
+
+/* ==========================
+   GAMEPLAY – DISEÑO PRINCIPAL
+========================== */
+
+.gameplay-page {
+  padding: 50px;
+}
+
+/* HERO */
+.gp-hero {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 50px 20px;
+  border: 4px solid #3cff9b;
+  box-shadow: 0 0 0 4px #145f3d;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+.gp-hero h1 {
+  font-size: 24px;
+  color: #66ffbf;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.gp-hero p {
+  font-size: 12px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* TARJETAS GENERAL */
+.gp-card {
+  background: #0f2d1d;
+  border: 4px solid #3cff9b;
+  box-shadow: 0 0 0 4px #145f3d;
+  padding: 30px;
+  margin-bottom: 35px;
+  border-radius: 10px;
+}
+
+.gp-card h2 {
+  font-size: 16px;
+  color: #66ffbf;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 0px #145f3d;
+}
+
+.gp-card ul li {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+/* GALERÍA */
+.gp-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 120px;
+  height: 120px;
+  background: #0b1f15;
+  border: 4px solid #66ffbf;
+  box-shadow: 0 0 0 4px #145f3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d0ffd8;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #66ffbf;
+}
+
+/* ==========================
+   ANIMACIONES RETRO PIXEL
+========================== */
+
+/* Fade-in */
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Slide-up */
+.slide-up {
+  animation: slideUp 1.2s ease forwards;
+  opacity: 0;
+  transform: translateY(25px);
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Pequeño delay */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+/* Pop efecto retro */
+.pop {
+  transition: transform 0.2s;
+}
+
+.pop:hover {
+  transform: scale(1.15) rotate(1deg);
+}
+
